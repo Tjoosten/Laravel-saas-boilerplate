@@ -22,7 +22,6 @@ Route::group(['middleware' => 'guest'], function() {
 });
 
 Route::group(['prefix' => 'account', 'middleware' => ['auth'], 'as' => 'account.'], function() {
-	Route::get('/', 'Account\AccountController@index')->name('index');
 
 	/**
 	 * profile
