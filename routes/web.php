@@ -2,8 +2,6 @@
 
 Auth::routes();
 
-Route::get('/', 'HomeController@index')->name('home');
-
 Route::group(['middleware' => ['auth', 'admin'], 'prefix' => 'admin', 'namespace' => 'Admin', 'as' => 'admin.'], function() {
 
 	Route::get('/impersonate', 'ImpersonateController@index')->name('impersonate.index');
